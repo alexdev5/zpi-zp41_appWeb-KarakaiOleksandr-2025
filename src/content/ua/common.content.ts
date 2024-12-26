@@ -1,1 +1,4 @@
-export const common = {}
+export const common = {
+    headerTitle:
+        'Звіти з лабораторних робіт з дисципліни "Інтернет-технологій та проєктувння WEB-завтосунків"',
+}
