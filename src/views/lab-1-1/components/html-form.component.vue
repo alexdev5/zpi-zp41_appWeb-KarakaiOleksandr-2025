@@ -1,6 +1,4 @@
-<template>
-    <aside></aside>
-</template>
+<template>html-form.component.vue</template>
 
 <script lang="ts" setup></script>
 

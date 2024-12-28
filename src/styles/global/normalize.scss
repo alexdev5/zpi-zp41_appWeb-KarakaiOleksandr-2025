@@ -5,7 +5,7 @@ body {
 
 body, html {
   font-family: 'Roboto', 'Helvetica Neue', sans-serif;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 h1 {
@@ -35,7 +35,7 @@ pre {
   font-size: 1rem;
 }
 
-a {
+a:hover {
   text-decoration: none;
 }
 
@@ -74,6 +74,10 @@ sup {
 
 template {
   display: none;
+}
+
+button {
+  font-size: .95rem;
 }
 
 [hidden] {

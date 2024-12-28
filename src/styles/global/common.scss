@@ -1,3 +1,69 @@
 .underlined {
   text-decoration: underline;
 }
+
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
+
+.ai-center {
+  align-items: center;
+}
+
+.gap-8 {
+  gap: 8px;
+}
+
+.gap-16 {
+  gap: 16px;
+}
+
+.gap-24 {
+  gap: 24px;
+}
+
+.gap-32 {
+  gap: 32px;
+}
+
+.font-size-m {
+  font-size: 1.3rem;
+}
+
+button {
+  border: 1px solid var(--app-color-p-80);
+  padding: 8px 16px;
+  border-radius: 10px;
+  transition: all 0.2s linear;
+  background: var(--app-color-secondary);
+  cursor: pointer;
+
+
+  &:hover {
+    background-color: var(--app-color-p-90);
+  }
+}
+
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  .app-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+}
+
+ul.list {
+  line-height: 1.8;
+}
+
+ul.list ul {
+  margin-block: 8px;
+}
