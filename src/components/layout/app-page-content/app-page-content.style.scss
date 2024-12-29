@@ -1,13 +1,19 @@
+@use "@/styles/utils/media" as *;
+
 .app-page-content-wrapper {
   display: flex;
   flex-grow: 1;
   gap: 16px;
+  flex-direction: column;
+
+  @include mobile {
+    flex-direction: row;
+  }
 }
 
 aside {
   min-height: 100%;
   background-color: var(--app-color-n-96);
-  width: 285px;
   padding: 16px;
   position: relative;
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3),
@@ -18,12 +24,20 @@ aside {
     margin: 0;
     padding: 0;
   }
+
+  @include mobile {
+    width: 285px;
+  }
 }
 
 .app-page-content {
   flex: 1;
-  padding: 24px 16px 24px 0;
+  padding: 16px;
   overflow-x: hidden;
+
+  @include mobile {
+    padding: 24px 16px 24px 0;
+  }
 }
 
 // aside

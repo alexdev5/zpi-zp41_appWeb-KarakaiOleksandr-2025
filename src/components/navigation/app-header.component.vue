@@ -42,6 +42,8 @@ const showMoreBtnContent = computed(() =>
 </script>
 
 <style lang="scss">
+@use '@/styles/utils/media' as *;
+
 header {
     display: grid;
     gap: 8px;
@@ -56,7 +58,11 @@ header {
         0px 2px 6px 2px rgba(0, 0, 0, 0.15);
 
     .header-title {
-        font-size: 1.4rem;
+        font-size: 1rem;
+
+        @include mobile {
+            font-size: 1.4rem;
+        }
     }
 
     .nav-menu {

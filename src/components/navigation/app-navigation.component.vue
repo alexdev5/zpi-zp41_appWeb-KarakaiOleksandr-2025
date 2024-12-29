@@ -24,8 +24,11 @@ const routes = [
 </script>
 
 <style lang="scss">
+@use '@/styles/utils/media' as *;
+
 .nav-menu {
     display: flex;
+    flex-wrap: wrap;
     gap: 16px;
 
     a {
@@ -39,12 +42,21 @@ const routes = [
     border-radius: 10px;
     transition: all 0.2s linear;
     background: var(--app-color-secondary);
-    font-size: 0.95rem;
+    font-size: 0.8rem;
+    width: 100%;
 
     &:hover,
     &.router-link-active {
         background-color: var(--app-color-p-40);
         color: var(--app-color-secondary);
+    }
+
+    @include mobile-s {
+        width: auto;
+    }
+
+    @include mobile {
+        font-size: 0.95rem;
     }
 }
 </style>
