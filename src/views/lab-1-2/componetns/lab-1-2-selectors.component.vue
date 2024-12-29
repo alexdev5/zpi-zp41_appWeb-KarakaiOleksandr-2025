@@ -16,7 +16,7 @@
 
         <code class="code-block">
             h1 &#123; color: red; &#125; /* Всі &lt;h1&gt; */ .class &#123;
-            color: blue; &#125; /* Елементи з класом "class" */ #id &#123;
+            color: blue; &#125; /* Елементи з класом "class" */ <br />#id &#123;
             color: green; &#125; /* Елемент із ID "id" */
         </code>
 

@@ -11,6 +11,21 @@
         <Lab12Selectors
             v-if="navigationItemActive === NavigationIdLab2.Selectors"
         />
+        <Lab12IndependentWork2
+            v-if="navigationItemActive === NavigationIdLab2.IndependentWork2"
+            @selected="navigationItemActive = $event"
+        />
+        <Lab12Fonts
+            v-if="
+                navigationItemActive === NavigationIdLab2.IndependentWork2Fonts
+            "
+        />
+        <Lab21CssTables
+            v-if="
+                navigationItemActive ===
+                NavigationIdLab2.IndependentWork2CssTables
+            "
+        />
     </AppPageContent>
 </template>
 
@@ -19,6 +34,9 @@ import Lab12Target from './componetns/lab-1-2-target.component.vue'
 import Lab12ConnectingStyles from './componetns/lab-1-2-connecting-styles.component.vue'
 import Lab12Selectors from './componetns/lab-1-2-selectors.component.vue'
 import AppPageContent from '@/components/layout/app-page-content/app-page-content.component.vue'
+import Lab12IndependentWork2 from './componetns/lab-1-2-independent-work-2.component.vue'
+import Lab12Fonts from './componetns/lab-1-2-fonts.component.vue'
+import Lab21CssTables from './componetns/lab-2-1-css-tables.component.vue'
 
 import { ref } from 'vue'
 import { NavigationIdLab2 } from './type.ts'
@@ -38,24 +56,24 @@ const records: AsideNavigationRecord[] = [
     {
         id: NavigationIdLab2.Selectors,
         label: 'Селектори',
-        children: [
-            {
-                id: NavigationIdLab2.TagSelector,
-                label: 'Селектор тегу',
-            },
-            {
-                id: NavigationIdLab2.ClassSelector,
-                label: 'Селектор класу',
-            },
-            {
-                id: NavigationIdLab2.IdSelector,
-                label: 'Селектор ідентифікатор',
-            },
-            {
-                id: NavigationIdLab2.OtherSelector,
-                label: 'Інші селектори',
-            },
-        ],
+        // children: [
+        //     {
+        //         id: NavigationIdLab2.TagSelector,
+        //         label: 'Селектор тегу',
+        //     },
+        //     {
+        //         id: NavigationIdLab2.ClassSelector,
+        //         label: 'Селектор класу',
+        //     },
+        //     {
+        //         id: NavigationIdLab2.IdSelector,
+        //         label: 'Селектор ідентифікатор',
+        //     },
+        //     {
+        //         id: NavigationIdLab2.OtherSelector,
+        //         label: 'Інші селектори',
+        //     },
+        // ],
     },
     {
         id: NavigationIdLab2.IndependentWork2,
