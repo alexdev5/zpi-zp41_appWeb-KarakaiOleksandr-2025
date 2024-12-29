@@ -1,5 +1,24 @@
 <template>
     <div class="grid gap-16">
+        <h3>Посилання:</h3>
+        <div class="mb-16">
+            <p>
+                Переглянути проєкт на сайті:
+                <a href="//labs.system-25.com" target="_blank">
+                    labs.system-25.com
+                </a>
+            </p>
+            <p>
+                Переглянути проєкт на
+                <a
+                    href="https://github.com/alexdev5/zpi-zp41_appWeb-KarakaiOleksandr-2025"
+                    target="_blank"
+                >
+                    github
+                </a>
+            </p>
+        </div>
+
         <h3>Мета проєкту</h3>
         <section>
             <p class="font-size-m">

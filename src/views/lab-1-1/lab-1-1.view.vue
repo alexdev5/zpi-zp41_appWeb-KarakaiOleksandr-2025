@@ -55,7 +55,7 @@ const records: AsideNavigationRecord[] = [
     },
     {
         id: NavigationIdLab1.Structure,
-        label: 'Структура документу',
+        label: 'Структура HTML документу',
         children: [
             {
                 id: NavigationIdLab1.HtmlTable,
