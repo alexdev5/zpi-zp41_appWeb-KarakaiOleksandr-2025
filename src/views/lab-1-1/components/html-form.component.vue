@@ -137,11 +137,11 @@
             </form>
             <div class="form-data">
                 <h4 class="mb-16">Дані форми</h4>
-                <pre>
-                    <code>
+                <code class="code-block" style="width: 100%">
+                    <pre>
                         {{ formData }}
-                    </code>
-                </pre>
+                    </pre>
+                </code>
             </div>
             <div class="html-form grid gap-16">
                 <h4>HTML код форми</h4>
@@ -274,15 +274,5 @@ fieldset {
 legend {
     font-weight: bold;
     font-size: 1.2em;
-}
-
-pre {
-    background-color: #f9f9f9;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    overflow-x: auto;
-    white-space: pre-wrap;
-    margin: 0;
 }
 </style>

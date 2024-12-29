@@ -20,7 +20,7 @@
                 navigationItemActive === NavigationIdLab2.IndependentWork2Fonts
             "
         />
-        <Lab21CssTables
+        <Lab12CssTables
             v-if="
                 navigationItemActive ===
                 NavigationIdLab2.IndependentWork2CssTables
@@ -36,7 +36,7 @@ import Lab12Selectors from './componetns/lab-1-2-selectors.component.vue'
 import AppPageContent from '@/components/layout/app-page-content/app-page-content.component.vue'
 import Lab12IndependentWork2 from './componetns/lab-1-2-independent-work-2.component.vue'
 import Lab12Fonts from './componetns/lab-1-2-fonts.component.vue'
-import Lab21CssTables from './componetns/lab-2-1-css-tables.component.vue'
+import Lab12CssTables from './componetns/lab-1-2-css-tables.component.vue'
 
 import { ref } from 'vue'
 import { NavigationIdLab2 } from './type.ts'

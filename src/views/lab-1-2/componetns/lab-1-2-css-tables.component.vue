@@ -48,7 +48,6 @@
         </code>
 
         <h3>Приклад використання:</h3>
-        <p>Таблиця з фоном і стилізованими списками:</p>
         <code class="code-block">
             &lt;table&gt;<br />
             &nbsp;&nbsp;&lt;thead&gt;<br />
@@ -69,6 +68,25 @@
             &nbsp;&nbsp;&lt;li&gt;Елемент списку 2&lt;/li&gt;<br />
             &lt;/ul&gt;<br />
         </code>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Назва</th>
+                    <th>Ціна</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Товар 1</td>
+                    <td>100 грн</td>
+                </tr>
+            </tbody>
+        </table>
+        <ul>
+            <li>Елемент списку 1</li>
+            <li>Елемент списку 2</li>
+        </ul>
     </section>
 </template>
 
