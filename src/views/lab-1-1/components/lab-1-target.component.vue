@@ -12,6 +12,23 @@
             результатів роботи всіх лабораторних робіт.
         </p>
     </div>
+    <div class="mt-24">
+        <p>
+            Переглянути проект:
+            <a href="//labs.system-25.com" target="_blank">
+                labs.system-25.com
+            </a>
+        </p>
+        <p>
+            Переглянути код проекту на
+            <a
+                href="https://github.com/alexdev5/zpi-zp41_appWeb-KarakaiOleksandr-2025/"
+                target="_blank"
+            >
+                github
+            </a>
+        </p>
+    </div>
 </template>
 
 <script lang="ts" setup></script>

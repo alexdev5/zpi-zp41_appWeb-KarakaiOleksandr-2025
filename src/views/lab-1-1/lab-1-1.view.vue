@@ -9,11 +9,16 @@
             v-if="navigationItemActive === NavigationIdLab1.Description"
         />
         <Lab1Structure
+            @selected="navigationItemActive = $event"
             v-if="navigationItemActive === NavigationIdLab1.Structure"
         />
         <HtmlTable v-if="navigationItemActive === NavigationIdLab1.HtmlTable" />
         <HtmlForm v-if="navigationItemActive === NavigationIdLab1.HtmlForm" />
         <HtmlImage v-if="navigationItemActive === NavigationIdLab1.HtmlImage" />
+        <Lab1Headers
+            v-if="navigationItemActive === NavigationIdLab1.HtmlHeader"
+        />
+        <Lab1Lists v-if="navigationItemActive === NavigationIdLab1.HtmlLists" />
         <Lab1Conclusion
             v-if="navigationItemActive === NavigationIdLab1.Conclusion"
         />
@@ -26,23 +31,16 @@ import Lab1Target from './components/lab-1-target.component.vue'
 import AppDescription from '@/views/shared/app-description.component.vue'
 import Lab1Structure from './components/lab-1-structure.component.vue'
 import HtmlTable from './components/html-table.component.vue'
-import HtmlImage from './components/html-table.component.vue'
+import HtmlImage from './components/html-image.component.vue'
 import HtmlForm from './components/html-form.component.vue'
+import Lab1Headers from './components/lab-1-headers.component.vue'
+import Lab1Lists from './components/lab-1-lists.component.vue'
 import Lab1Conclusion from './components/lab-1-conclusion.component.vue'
 
 import type { AsideNavigationRecord } from '@/components/layout/types.ts'
 
 import { ref } from 'vue'
-
-enum NavigationIdLab1 {
-    Target,
-    Description,
-    Structure,
-    HtmlTable,
-    HtmlForm,
-    HtmlImage,
-    Conclusion,
-}
+import { NavigationIdLab1 } from '@/views/lab-1-1/type.ts'
 
 const navigationItemActive = ref(NavigationIdLab1.Target)
 
@@ -61,15 +59,23 @@ const records: AsideNavigationRecord[] = [
         children: [
             {
                 id: NavigationIdLab1.HtmlTable,
-                label: 'HTML код таблиць',
+                label: 'Таблиці',
             },
             {
                 id: NavigationIdLab1.HtmlForm,
-                label: 'HTML код форми',
+                label: 'Форми',
             },
             {
                 id: NavigationIdLab1.HtmlImage,
-                label: 'HTML код зображення',
+                label: 'Зображення',
+            },
+            {
+                id: NavigationIdLab1.HtmlHeader,
+                label: 'Заголовки',
+            },
+            {
+                id: NavigationIdLab1.HtmlLists,
+                label: 'Списки',
             },
         ],
     },

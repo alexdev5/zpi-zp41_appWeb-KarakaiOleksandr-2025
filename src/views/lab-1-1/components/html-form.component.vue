@@ -1,6 +1,6 @@
 <template>
     <div class="app-form-view">
-        <div class="flex gap-16">
+        <div class="grid gap-16 app-form-view-container">
             <form
                 class="checkout"
                 @submit.prevent="handleSubmit"
@@ -136,11 +136,96 @@
                 </fieldset>
             </form>
             <div class="form-data">
+                <h4 class="mb-16">Дані форми</h4>
                 <pre>
                     <code>
                         {{ formData }}
                     </code>
                 </pre>
+            </div>
+            <div class="html-form grid gap-16">
+                <h4>HTML код форми</h4>
+                <code class="code-block">
+                    &lt;form<br />
+                    class=&quot;checkout&quot;<br />
+                    @submit.prevent=&quot;handleSubmit&quot;<br />
+                    autocomplete=&quot;off&quot;<br />
+                    &gt;<br />
+                    &nbsp;&nbsp;&lt;fieldset class=&quot;grid
+                    gap-16&quot;&gt;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;legend&gt;Форма для покупки
+                    товару&lt;/legend&gt;<br />
+                    <br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;grid
+                    gap-8&quot;&gt;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label
+                    for=&quot;name&quot;&gt;Ім&#39;я покупця:&lt;/label&gt;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;v-model=&quot;formData.name&quot;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type=&quot;text&quot;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id=&quot;name&quot;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;required<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;placeholder=&quot;Ваше
+                    ім&#39;я&quot;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;autocomplete=&quot;off&quot;<br />
+                    /&gt;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />
+                    <br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;grid
+                    gap-8&quot;&gt;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label
+                    for=&quot;email&quot;&gt;Електронна пошта:&lt;/label&gt;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;v-model=&quot;formData.email&quot;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type=&quot;email&quot;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id=&quot;email&quot;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;required<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;placeholder=&quot;email@example.com&quot;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;autocomplete=&quot;off&quot;<br />
+                    /&gt;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />
+                    <br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;grid
+                    gap-8&quot;&gt;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label
+                    for=&quot;password&quot;&gt;Пароль для
+                    акаунту:&lt;/label&gt;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;v-model=&quot;formData.password&quot;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type=&quot;password&quot;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id=&quot;password&quot;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;required<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;autocomplete=&quot;new-password&quot;<br />
+                    /&gt;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />
+                    <br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;grid
+                    gap-8&quot;&gt;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Оберіть спосіб
+                    доставки: *&lt;/p&gt;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label
+                    class=&quot;flex gap-8&quot;&gt;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;v-model=&quot;formData.product&quot;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type=&quot;radio&quot;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value=&quot;Самовивіз&quot;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;required<br />
+                    /&gt;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Самовивіз<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />
+                    <br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;flex
+                    gap-8&quot;&gt;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button
+                    type=&quot;submit&quot;&gt;Підтвердити&lt;/button&gt;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button
+                    type=&quot;reset&quot;
+                    @click=&quot;resetForm&quot;&gt;Очистити&lt;/button&gt;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />
+                    &nbsp;&nbsp;&lt;/fieldset&gt;<br />
+                    &lt;/form&gt;
+                </code>
             </div>
         </div>
     </div>
@@ -176,6 +261,10 @@ const resetForm = () => {
 </script>
 
 <style scoped>
+.app-form-view-container {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+}
+
 fieldset {
     border: 1px solid #ccc;
     padding: 20px;
@@ -194,5 +283,6 @@ pre {
     border-radius: 5px;
     overflow-x: auto;
     white-space: pre-wrap;
+    margin: 0;
 }
 </style>

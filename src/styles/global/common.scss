@@ -47,6 +47,14 @@
   font-size: 1.3rem;
 }
 
+.mt-24 {
+  margin-top: 24px;
+}
+
+.mb-16 {
+  margin-bottom: 16px;
+}
+
 button {
   border: 1px solid var(--app-color-p-80);
   padding: 8px 16px;
@@ -73,6 +81,21 @@ button {
   }
 }
 
+.code {
+  background-color: #f9f9f9;
+  padding: 0 2px;
+  border: 1px solid #ccc;
+  display: inline-block;
+}
+
+.code-block {
+  background-color: #f9f9f9;
+  padding: 16px;
+  border: 1px solid #ccc;
+  display: inline-block;
+  border-radius: 5px;
+}
+
 ul.list {
   line-height: 1.8;
 }
@@ -83,4 +106,43 @@ ul.list ul {
 
 input[type='text'], input[type="password"], input[type="email"], select {
   padding: 8px 8px;
+}
+
+// Table
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+
+caption {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  text-align: left;
+  padding: 8px;
+}
+
+thead th {
+  background-color: #f4f4f4;
+  border-bottom: 2px solid #aaa;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+tfoot td {
+  font-weight: bold;
+  border-top: 2px solid #aaa;
+  text-align: right;
 }
