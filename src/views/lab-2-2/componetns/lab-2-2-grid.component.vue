@@ -1,6 +1,7 @@
 <template>
-    <div class="container-queries-wrapper queries-wrapper">
-        <div class="container-queries">
+    <section class="grid gap-8 text-content-wrapper">
+        <h3>Респонсивна верстка з використанням CSS Grid</h3>
+        <div class="container-grid-wrapper">
             <div
                 class="block-item"
                 v-for="block in blocks"
@@ -9,7 +10,7 @@
                 {{ block.label }}
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <script lang="ts" setup>
@@ -66,37 +67,13 @@ const blocks = [
 </script>
 
 <style lang="scss">
-.container-queries-wrapper {
-    container: block-wrapper / inline-size;
+.container-grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
 
-    .container-queries {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 16px;
-    }
-}
-
-.queries-wrapper {
     .block-item {
-        width: 250px;
         height: 250px;
-    }
-}
-
-@supports (container-type: inline-size) {
-    @container block-wrapper (max-width: 1000px) {
-        .queries-wrapper {
-            .block-item {
-                width: calc(50% - 16px);
-                height: 150px;
-            }
-        }
-    }
-
-    @container block-wrapper (max-width: 40rem) {
-    }
-
-    @container block-wrapper (max-width: 26rem) {
     }
 }
 </style>

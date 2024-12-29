@@ -11,6 +11,7 @@
         <Lab22ContainerQueries
             v-if="navigationItemActive === NavigationIdLab22.ContainerQueries"
         />
+        <Lab22Grid v-if="navigationItemActive === NavigationIdLab22.Grid" />
     </AppPageContent>
 </template>
 
@@ -19,6 +20,7 @@ import AppPageContent from '@/components/layout/app-page-content/app-page-conten
 import Lab21Target from '@/views/lab-2-2/componetns/lab-2-2-target.component.vue'
 import Lab22MediaQueries from './componetns/lab-2-2-media-queries.component.vue'
 import Lab22ContainerQueries from './componetns/lab-2-2-container-queries.component.vue'
+import Lab22Grid from './componetns/lab-2-2-grid.component.vue'
 
 import { ref } from 'vue'
 import type { AsideNavigationRecord } from '@/components/layout/types.ts'
@@ -38,6 +40,10 @@ const records: AsideNavigationRecord[] = [
     {
         id: NavigationIdLab22.ContainerQueries,
         label: 'Container queries',
+    },
+    {
+        id: NavigationIdLab22.Grid,
+        label: 'Grid Layout',
     },
 ]
 </script>
