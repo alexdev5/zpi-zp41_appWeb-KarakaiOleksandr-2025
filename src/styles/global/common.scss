@@ -150,3 +150,13 @@ tfoot td {
   border-top: 2px solid #aaa;
   text-align: right;
 }
+
+.text-content-wrapper {
+  h4, h3, h2 {
+    margin-block-start: 16px;
+
+    &:first-child {
+      margin: 0;
+    }
+  }
+}

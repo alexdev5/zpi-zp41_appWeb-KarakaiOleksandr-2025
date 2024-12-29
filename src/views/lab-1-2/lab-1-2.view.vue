@@ -4,14 +4,20 @@
         :navigation-item-active="navigationItemActive"
         @navigation-selected="navigationItemActive = $event"
     >
-        <lab12Target />
-        <Lab12ConnectingFonts />
+        <Lab12Target v-if="navigationItemActive === NavigationIdLab2.Target" />
+        <Lab12ConnectingStyles
+            v-if="navigationItemActive === NavigationIdLab2.ConnectingStyles"
+        />
+        <Lab12Selectors
+            v-if="navigationItemActive === NavigationIdLab2.Selectors"
+        />
     </AppPageContent>
 </template>
 
 <script lang="ts" setup>
-import lab12Target from './componetns/lab-1-2-target.component.vue'
-import Lab12ConnectingFonts from './componetns/lab-1-2-connecting-fonts.component.vue'
+import Lab12Target from './componetns/lab-1-2-target.component.vue'
+import Lab12ConnectingStyles from './componetns/lab-1-2-connecting-styles.component.vue'
+import Lab12Selectors from './componetns/lab-1-2-selectors.component.vue'
 import AppPageContent from '@/components/layout/app-page-content/app-page-content.component.vue'
 
 import { ref } from 'vue'
@@ -26,37 +32,47 @@ const records: AsideNavigationRecord[] = [
         label: 'Тема, мета, мізце розташування',
     },
     {
-        id: NavigationIdLab2.ConnectingFonts,
-        label: 'Опис предметного середовища',
+        id: NavigationIdLab2.ConnectingStyles,
+        label: 'Способи підключення стилів',
     },
     {
-        id: NavigationIdLab1.Structure,
-        label: 'Структура HTML документу',
+        id: NavigationIdLab2.Selectors,
+        label: 'Селектори',
         children: [
             {
-                id: NavigationIdLab1.HtmlTable,
-                label: 'Таблиці',
+                id: NavigationIdLab2.TagSelector,
+                label: 'Селектор тегу',
             },
             {
-                id: NavigationIdLab1.HtmlForm,
-                label: 'Форми',
+                id: NavigationIdLab2.ClassSelector,
+                label: 'Селектор класу',
             },
             {
-                id: NavigationIdLab1.HtmlImage,
-                label: 'Зображення',
+                id: NavigationIdLab2.IdSelector,
+                label: 'Селектор ідентифікатор',
             },
             {
-                id: NavigationIdLab1.HtmlHeader,
-                label: 'Заголовки',
-            },
-            {
-                id: NavigationIdLab1.HtmlLists,
-                label: 'Списки',
+                id: NavigationIdLab2.OtherSelector,
+                label: 'Інші селектори',
             },
         ],
     },
     {
-        id: NavigationIdLab1.Conclusion,
+        id: NavigationIdLab2.IndependentWork2,
+        label: 'Самостійна робота №2',
+        children: [
+            {
+                id: NavigationIdLab2.IndependentWork2Fonts,
+                label: 'Шрифт. Google Fonts',
+            },
+            {
+                id: NavigationIdLab2.IndependentWork2CssTables,
+                label: 'CSS: Таблиці. Фон. Списки',
+            },
+        ],
+    },
+    {
+        id: NavigationIdLab2.Conclusion,
         label: 'Висновки',
     },
 ]
