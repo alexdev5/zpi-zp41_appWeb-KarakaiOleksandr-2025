@@ -35,7 +35,9 @@ import { computed, ref } from 'vue'
 
 const detailsOpened = ref(true)
 const showMoreBtnContent = computed(() =>
-    detailsOpened.value ? `Менше <span>-</span>` : `Більше <span>+</span>`
+    detailsOpened.value
+        ? `Згорнути <span>-</span>`
+        : `Рознорнути <span>+</span>`
 )
 </script>
 

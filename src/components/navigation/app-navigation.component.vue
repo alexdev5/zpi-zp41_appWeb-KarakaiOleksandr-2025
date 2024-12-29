@@ -12,7 +12,6 @@
 
 <script lang="ts" setup>
 import { RouteName } from '@/router'
-//import { content } from '@/content'
 
 const routes = [
     { name: RouteName.Lab1_1, label: 'Лабораторна робота № 1.1' },
