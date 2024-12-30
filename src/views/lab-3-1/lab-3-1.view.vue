@@ -54,4 +54,6 @@ const records: AsideNavigationRecord[] = [
 ]
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+@use './lab-3-1.style' as *;
+</style>

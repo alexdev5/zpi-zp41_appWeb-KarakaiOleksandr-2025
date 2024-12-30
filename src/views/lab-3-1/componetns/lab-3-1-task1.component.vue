@@ -32,8 +32,8 @@
             </ul>
         </div>
 
-        <div class="flex gap-16">
-            <div class="grid gap-16 get-shipping-message-params">
+        <div class="grid gap-16 function-checking-container">
+            <div class="flex-column gap-16 function-checking-params">
                 <label>
                     <span>Country</span>
                     <input type="text" v-model="country" />
@@ -84,12 +84,3 @@ function getShippingMessage(
     return `Shipping to ${country} will cost ${totalPrice} credits`
 }
 </script>
-
-<style lang="scss">
-.get-shipping-message-params {
-    label > span {
-        display: inline-block;
-        min-width: 100px;
-    }
-}
-</style>

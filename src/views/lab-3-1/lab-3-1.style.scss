@@ -1,0 +1,10 @@
+.function-checking-params {
+  label > span {
+    display: inline-block;
+    min-width: 120px;
+  }
+}
+
+.function-checking-container {
+  grid-template-columns: 350px 1fr 1fr;
+}
