@@ -98,7 +98,7 @@
                         <label class="flex gap-8">
                             <input
                                 v-model="formData.services"
-                                type="checkbox"
+                                npmtype="checkbox"
                                 value="Експрес-доставка"
                             />
 
@@ -108,7 +108,11 @@
 
                     <div class="grid gap-8">
                         <label for="quantity">Кількість:</label>
-                        <select name="quantity" id="quantity">
+                        <select
+                            name="quantity"
+                            id="quantity"
+                            v-model="formData.quantity"
+                        >
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
