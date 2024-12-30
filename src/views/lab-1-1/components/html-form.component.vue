@@ -98,7 +98,7 @@
                         <label class="flex gap-8">
                             <input
                                 v-model="formData.services"
-                                npmtype="checkbox"
+                                type="checkbox"
                                 value="Експрес-доставка"
                             />
 
@@ -132,7 +132,9 @@
                     </div>
 
                     <div class="flex gap-8">
-                        <button type="submit">Підтвердити</button>
+                        <button class="btn-success" type="submit">
+                            Підтвердити
+                        </button>
                         <button type="reset" @click="resetForm">
                             Очистити
                         </button>
