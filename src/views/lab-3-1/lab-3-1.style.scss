@@ -1,3 +1,5 @@
+@use "@/styles/utils/media" as *;
+
 .function-checking-params {
   label > span {
     display: inline-block;
@@ -6,5 +8,9 @@
 }
 
 .function-checking-container {
-  grid-template-columns: 350px 1fr 1fr;
+  grid-template-columns: 1fr;
+
+  @include mobile {
+    grid-template-columns: 350px 1fr 1fr;
+  }
 }
