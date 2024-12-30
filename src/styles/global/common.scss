@@ -71,6 +71,17 @@ button {
   &:hover {
     background-color: var(--app-color-p-90);
   }
+
+  &.btn-success {
+    background: var(--app-color-p-40);
+    color: var(--app-color-secondary);
+    border-color: var(--app-color-p-40);
+
+    &:hover {
+      background: var(--app-color-p-90);
+      color: var(--app-color-p-05);
+    }
+  }
 }
 
 .app-wrapper {

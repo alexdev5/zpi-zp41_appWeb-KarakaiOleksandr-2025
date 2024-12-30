@@ -153,16 +153,19 @@ function findMaxElement(array: number[]): { max: number; index: number } {
 
 // Функція для знаходження мінімального елемента та його індекса серед елементів з непарними індексами
 function findMinElementOddIndexed(array: number[]): {
-    min: number
-    index: number
+    min: number | null
+    index: number | null
 } {
+    if (!array.length) return {min: null, index: null}
+
     const result = array
         .map((value, idx) => ({ value, idx }))
         .filter(({ idx }) => idx % 2 !== 0)
         .reduce((acc, curr) => (acc.value < curr.value ? acc : curr), {
-            value: Number.MAX_VALUE,
+            value: array.length > 1 ? Number.MAX_VALUE : 0,
             idx: 0,
         })
+
     return { min: result.value, index: result.idx }
 }
 
