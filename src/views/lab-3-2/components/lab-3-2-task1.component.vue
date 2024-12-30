@@ -72,7 +72,7 @@ interface Product {
 }
 
 const productIdModel = ref(1)
-const result = ref([])
+const result = ref<string | Product>('')
 
 const isShowMore = ref(false)
 
