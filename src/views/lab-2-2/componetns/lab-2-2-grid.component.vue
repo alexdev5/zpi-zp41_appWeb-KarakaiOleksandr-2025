@@ -1,13 +1,13 @@
 <template>
     <section class="grid gap-8 text-content-wrapper">
-        <h3>Респонсивна верстка з використанням CSS Grid</h3>
+        <h3>Responsive layout з використанням CSS Grid layout</h3>
         <div class="container-grid-wrapper">
             <div
                 class="block-item"
                 v-for="block in blocks"
                 :style="{ background: block.background }"
             >
-                {{ block.label }}
+                <span>{{ block.label }}</span>
             </div>
         </div>
     </section>
@@ -74,6 +74,20 @@ const blocks = [
 
     .block-item {
         height: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.6rem;
+
+        span {
+            display: flex;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #fff;
+            align-items: center;
+            justify-content: center;
+        }
     }
 }
 </style>
