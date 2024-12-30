@@ -77,8 +77,6 @@
                 &nbsp;&nbsp;if (totalPrice > customerCredits) &#123;<br />
                 &nbsp;&nbsp;&nbsp;&nbsp;return 'Insufficient funds!';<br />
                 &nbsp;&nbsp;&#125; else &#123;<br />
-                &nbsp;&nbsp;&nbsp;&nbsp;// Повертаємо повідомлення про успішне
-                замовлення<br />
                 &nbsp;&nbsp;&nbsp;&nbsp;return `You ordered
                 &#36;&#123;quantity&#125; droids worth
                 &#36;&#123;totalPrice&#125; credits!`;<br />
@@ -108,7 +106,6 @@ function makeTransaction(
     if (totalPrice > customerCredits) {
         return 'Insufficient funds!'
     } else {
-        // Повертаємо повідомлення про успішне замовлення
         return `You ordered ${quantity} droids worth ${totalPrice} credits!`
     }
 }
