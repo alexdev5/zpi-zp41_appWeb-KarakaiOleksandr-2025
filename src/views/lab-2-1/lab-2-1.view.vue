@@ -20,6 +20,16 @@
         <Lab21FixedLayout
             v-if="navigationItemActive === NavigationIdLab21.Task2FixedLayout"
         />
+        <Lab21Task3FlexboxHtmlCode
+            v-if="
+                navigationItemActive === NavigationIdLab21.Task3FlexboxHtmlCode
+            "
+        />
+        <Lab21Task3FlexboxCssCode
+            v-if="
+                navigationItemActive === NavigationIdLab21.Task3FlexboxCssCode
+            "
+        />
     </AppPageContent>
 </template>
 
@@ -31,6 +41,8 @@ import Lab21Task2 from './componetns/lab-2-1-task2.component.vue'
 import Lab21Task3 from './componetns/lab-2-1-task3.component.vue'
 import Lab21FluidLayout from './componetns/lab-2-1-task2-fluid-layout.component.vue'
 import Lab21FixedLayout from './componetns/lab-2-1-task2-fixed-layout.component.vue'
+import Lab21Task3FlexboxHtmlCode from './componetns/lab-2-1-task3-flexbox-html-code.component.vue'
+import Lab21Task3FlexboxCssCode from './componetns/lab-2-1-task3-flexbox-css-code.component.vue'
 
 import { ref } from 'vue'
 import type { AsideNavigationRecord } from '@/components/layout/types.ts'
@@ -67,7 +79,7 @@ const records: AsideNavigationRecord[] = [
         children: [
             {
                 id: NavigationIdLab21.Task3FlexboxHtmlCode,
-                label: 'HTML-код (Flexbox)',
+                label: 'HTML-код Flexbox',
             },
             {
                 id: NavigationIdLab21.Task3FlexboxCssCode,
@@ -75,10 +87,10 @@ const records: AsideNavigationRecord[] = [
             },
         ],
     },
-    {
-        id: NavigationIdLab21.Conclusion,
-        label: 'Висновки',
-    },
+    // {
+    //     id: NavigationIdLab21.Conclusion,
+    //     label: 'Висновки',
+    // },
 ]
 </script>
 

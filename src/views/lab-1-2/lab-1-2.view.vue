@@ -89,10 +89,10 @@ const records: AsideNavigationRecord[] = [
             },
         ],
     },
-    {
-        id: NavigationIdLab2.Conclusion,
-        label: 'Висновки',
-    },
+    // {
+    //     id: NavigationIdLab2.Conclusion,
+    //     label: 'Висновки',
+    // },
 ]
 </script>
 

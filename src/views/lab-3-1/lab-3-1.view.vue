@@ -47,10 +47,10 @@ const records: AsideNavigationRecord[] = [
         id: NavigationIdLab31.Task4,
         label: 'ЗАВДАННЯ №4',
     },
-    {
-        id: NavigationIdLab31.Task5,
-        label: 'ЗАВДАННЯ №5',
-    },
+    // {
+    //     id: NavigationIdLab31.Task5,
+    //     label: 'ЗАВДАННЯ №5',
+    // },
 ]
 </script>
 
