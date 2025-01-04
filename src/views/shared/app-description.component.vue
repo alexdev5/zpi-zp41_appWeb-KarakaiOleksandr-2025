@@ -19,6 +19,13 @@
             </p>
         </div>
 
+        <h3>Тема проєкту</h3>
+        <section>
+            <p class="font-size-m">
+                SPA-додаток для перегляду лабораторних робіт студента
+            </p>
+        </section>
+
         <h3>Мета проєкту</h3>
         <section>
             <p class="font-size-m">
