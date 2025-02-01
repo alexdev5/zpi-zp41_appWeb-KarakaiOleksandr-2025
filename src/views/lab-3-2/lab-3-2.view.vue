@@ -6,6 +6,8 @@
     >
         <Lab32Target v-if="navigationItemActive === NavigationIdLab32.Target" />
         <Lab32Task1 v-if="navigationItemActive === NavigationIdLab32.Task1" />
+        <Lab32Task2 v-if="navigationItemActive === NavigationIdLab32.Task2" />
+        <Lab32Task3 v-if="navigationItemActive === NavigationIdLab32.Task3" />
     </AppPageContent>
 </template>
 
@@ -13,6 +15,8 @@
 import AppPageContent from '@/components/layout/app-page-content/app-page-content.component.vue'
 import Lab32Target from './components/lab-3-2-target.component.vue'
 import Lab32Task1 from './components/lab-3-2-task1.component.vue'
+import Lab32Task2 from './components/lab-3-2-task2.component.vue'
+import Lab32Task3 from './components/lab-3-2-task3.component.vue'
 
 import { ref } from 'vue'
 import type { AsideNavigationRecord } from '@/components/layout/types.ts'
@@ -27,6 +31,10 @@ const records: AsideNavigationRecord[] = [
     {
         id: NavigationIdLab32.Task1,
         label: 'ЗАВДАННЯ №1',
+    },
+    {
+        id: NavigationIdLab32.Task2,
+        label: 'ЗАВДАННЯ №2',
     },
 ]
 </script>
