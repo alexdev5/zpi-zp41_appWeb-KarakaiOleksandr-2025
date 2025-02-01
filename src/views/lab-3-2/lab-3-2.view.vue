@@ -36,6 +36,10 @@ const records: AsideNavigationRecord[] = [
         id: NavigationIdLab32.Task2,
         label: 'ЗАВДАННЯ №2',
     },
+    {
+        id: NavigationIdLab32.Task3,
+        label: 'ЗАВДАННЯ №3',
+    },
 ]
 </script>
 
