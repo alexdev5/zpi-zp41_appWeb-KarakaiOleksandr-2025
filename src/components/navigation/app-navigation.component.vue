@@ -12,8 +12,13 @@
 
 <script lang="ts" setup>
 import { RouteName } from '@/router'
+import { useAppStore } from '@/app.store.ts'
+import { computed } from 'vue'
+import { content } from '@/content'
 
-const routes = [
+const store = useAppStore()
+
+const routesSemester1 = [
     { name: RouteName.Lab1_1, label: 'Лабораторна робота № 1.1' },
     { name: RouteName.Lab1_2, label: 'Лабораторна робота № 1.2' },
     { name: RouteName.Lab2_1, label: 'Лабораторна робота № 2.1' },
@@ -21,6 +26,22 @@ const routes = [
     { name: RouteName.Lab3_1, label: 'Лабораторна робота № 3.1' },
     { name: RouteName.Lab3_2, label: 'Лабораторна робота № 3.2' },
 ]
+
+const routesSemester2 = [
+    { name: RouteName.Lab4, label: content.routes.lab4 },
+    {
+        name: RouteName.Lab4,
+        label: content.routes.lab5,
+    },
+    {
+        name: RouteName.Lab4,
+        label: content.routes.lab6,
+    },
+]
+
+const routes = computed(() =>
+    store.isOneSemester ? routesSemester1 : routesSemester2
+)
 </script>
 
 <style lang="scss">

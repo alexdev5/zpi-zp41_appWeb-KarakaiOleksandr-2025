@@ -1,0 +1,28 @@
+.semester-two {
+  header {
+    background: #dfe9f1;
+    border-color: #dfe9f1;
+  }
+
+  .nav-menu-item:hover, .nav-menu-item.router-link-active {
+    background-color: var(--app-color-s-40);
+    color: var(--app-color-secondary);
+  }
+
+  .aside-navigation-item {
+    > button:hover {
+      background-color: var(--app-color-s-90);
+    }
+  }
+
+  .aside-navigation-item.active {
+    > button {
+      background-color: var(--app-color-s-90);
+      position: relative;
+
+      &:before {
+        background: var(--app-color-s-40);
+      }
+    }
+  }
+}

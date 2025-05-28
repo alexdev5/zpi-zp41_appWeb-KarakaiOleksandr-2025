@@ -8,12 +8,34 @@
                     @click="detailsOpened = !detailsOpened"
                     v-html="showMoreBtnContent"
                 />
+                <AppBtn
+                    size="sm"
+                    :variant="store.isOneSemester ? 'secondary' : 'third'"
+                    outlined
+                    @click="toggleSemester(Semester.One)"
+                >
+                    Семестр 1
+                </AppBtn>
+                <AppBtn
+                    size="sm"
+                    :variant="store.isTwoSemester ? 'secondary' : 'third'"
+                    outlined
+                    @click="toggleSemester(Semester.Two)"
+                >
+                    Семестр 2
+                </AppBtn>
             </div>
             <a href="https://github.com/alexdev5" target="_blank">github.com</a>
         </div>
 
         <template v-if="detailsOpened">
-            <p class="header-title">{{ content.common.headerTitle }}</p>
+            <p class="header-title">
+                {{
+                    store.isOneSemester
+                        ? content.common.headerTitle
+                        : content.common.headerTitleSemesterTwo
+                }}
+            </p>
             <p>
                 Виконавець: Студент групи ЗПІ-зп41
                 <a href="https://github.com/alexdev5" target="_blank">
@@ -28,10 +50,15 @@
 
 <script lang="ts" setup>
 import AppNavigation from './app-navigation.component.vue'
+import AppBtn from '@/components/ui/app-btn.component.vue'
 
 import { content } from '@/content'
 import { RouteName } from '@/router'
 import { computed, ref } from 'vue'
+import { Semester } from '@/app.types.ts'
+import { useAppStore } from '@/app.store.ts'
+
+const store = useAppStore()
 
 const detailsOpened = ref(true)
 const showMoreBtnContent = computed(() =>
@@ -39,6 +66,10 @@ const showMoreBtnContent = computed(() =>
         ? `Згорнути <span>-</span>`
         : `Рознорнути <span>+</span>`
 )
+
+function toggleSemester(semester: Semester) {
+    store.state.semester = semester
+}
 </script>
 
 <style lang="scss">
