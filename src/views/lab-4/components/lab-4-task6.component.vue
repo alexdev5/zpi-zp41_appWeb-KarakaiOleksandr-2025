@@ -64,7 +64,7 @@ function reset() {
                 </div>
 
                 <div class="grid gap-16 full">
-                    <h4>Native JS (count: {{ countNativeClick }})</h4>
+                    <h4>Native (count: {{ countNativeClick }})</h4>
                     <ul class="doubling-element">
                         <li data-number-default="1">1</li>
                         <li data-number-default="4">4</li>
@@ -72,8 +72,8 @@ function reset() {
                         <li data-number-default="16">16</li>
                         <li data-number-default="20">20</li>
                         <li data-number-default="30">30</li>
-                        <li data-number-default="30">40</li>
-                        <li data-number-default="30">50</li>
+                        <li data-number-default="40">40</li>
+                        <li data-number-default="50">50</li>
                     </ul>
                     <div class="flex gap-16">
                         <AppBtn class="btn-double">Подвоїти</AppBtn>

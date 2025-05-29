@@ -8,6 +8,7 @@
         <Lab4Task2 v-if="navigationItemActive === NavigationIdLab4.Task2" />
         <Lab4Task4 v-if="navigationItemActive === NavigationIdLab4.Task4" />
         <Lab4Task6 v-if="navigationItemActive === NavigationIdLab4.Task6" />
+        <Lab4Task7 v-if="navigationItemActive === NavigationIdLab4.Task7" />
     </AppPageContent>
 </template>
 
@@ -17,6 +18,7 @@ import Lab4Target from './components/lab-4-target.component.vue'
 import Lab4Task2 from './components/lab-4-task2.component.vue'
 import Lab4Task4 from './components/lab-4-task4.component.vue'
 import Lab4Task6 from './components/lab-4-task6.component.vue'
+import Lab4Task7 from './components/lab-4-task7.component.vue'
 
 import { ref } from 'vue'
 import type { AsideNavigationRecord } from '@/components/layout/types.ts'
@@ -39,6 +41,10 @@ const records: AsideNavigationRecord[] = [
     {
         id: NavigationIdLab4.Task6,
         label: 'ЗАВДАННЯ №6',
+    },
+    {
+        id: NavigationIdLab4.Task7,
+        label: 'ЗАВДАННЯ №7',
     },
 ]
 </script>
