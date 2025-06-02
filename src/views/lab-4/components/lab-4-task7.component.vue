@@ -51,23 +51,9 @@
                         </li>
                     </ul>
                 </code>
-            </div>
-        </div>
-    </div>
-</template>
-
-<script lang="ts" setup>
-import { onMounted, ref } from 'vue'
-
-interface Record {
-    title: string
-    number: number | string
-}
-
-const categories = ref()
-const categoryList = ref<Record[]>([])
-
-onMounted(() => {
+                <code class="code-block">
+                    <pre>
+function countList() {
     const listItems = document.querySelectorAll('#categories li.item')
     const result: Record[] = []
 
@@ -85,6 +71,47 @@ onMounted(() => {
     })
 
     categoryList.value = result
+}
+                    </pre>
+                </code>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script lang="ts" setup>
+import { onMounted, ref } from 'vue'
+
+interface Record {
+    title: string
+    number: number | string
+}
+
+const categories = ref()
+const categoryList = ref<Record[]>([])
+
+function countList() {
+    const listItems = document.querySelectorAll('#categories li.item')
+    const result: Record[] = []
+
+    listItems.forEach((item) => {
+        const header = item.querySelector('h4')
+        const title = header?.textContent?.trim()
+        const list = item.querySelectorAll('ul li')
+
+        console.log(title, list.length)
+
+        result.push({
+            title: title ?? '',
+            number: list.length,
+        })
+    })
+
+    categoryList.value = result
+}
+
+onMounted(() => {
+    countList()
 })
 </script>
 <style>
