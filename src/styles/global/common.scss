@@ -41,6 +41,16 @@
   justify-content: space-between;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
+hr {
+  height: 1px;
+  background: #c0c0c0;
+  width: 100%;
+}
+
 .gap-8 {
   gap: 8px;
 }
@@ -75,6 +85,18 @@
 
 .max-w-300 {
   max-width: 300px;
+}
+
+.w-100p {
+  width: 100%;
+}
+
+.w-300 {
+  width: 300px;
+}
+
+.max-w-500 {
+  max-width: 500px;
 }
 
 .border-bottom {

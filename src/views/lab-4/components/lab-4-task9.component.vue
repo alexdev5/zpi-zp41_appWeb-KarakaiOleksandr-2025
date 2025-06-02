@@ -10,12 +10,11 @@
                 функцію getRandomHexColor().
                 <code>
                     <pre>
-                    function getRandomHexColor() {
-                    return `#${Math.floor(Math.random() *
-                    16777215)
-                    .toString(16)
-                    .padStart(6, 0)}`;
-                }
+function getRandomHexColor() {
+    return `#${Math.floor(Math.random() * 16777215)
+        .toString(16)
+        .padStart(6, 0)}`;
+}
                 </pre
                     >
                 </code>
@@ -25,24 +24,41 @@
                 форматі rgb. Це нормально й не потребує якихось правок.
             </p>
             <div class="flex gap-16">
-                <code class="code-block">
-                    <pre></pre>
-                </code>
+                <div
+                    class="lab-4-8-color-block flex ai-center justify-center"
+                    :style="{ 'background-color': color }"
+                >
+                    <h1>color: {{ color }}</h1>
+                </div>
+                <AppBtn @click="changeColor()">change-color</AppBtn>
             </div>
         </div>
     </div>
 </template>
 
-<script lang="ts" setup></script>
-<style>
-.code-block {
-    ul {
-        padding-inline: 16px;
+<script lang="ts" setup>
+import { ref } from 'vue'
+import AppBtn from '@/components/ui/app-btn.component.vue'
 
-        li {
-            display: grid;
-            grid-template-columns: 120px 1fr;
-        }
+const color = ref(getRandomHexColor())
+
+function changeColor() {
+    color.value = getRandomHexColor()
+}
+
+function getRandomHexColor() {
+    return `#${Math.floor(Math.random() * 16777215)
+        .toString(16)
+        .padStart(6, '0')}`
+}
+</script>
+<style>
+.lab-4-8-color-block {
+    width: 400px;
+    height: 400px;
+
+    h1 {
+        color: #fff;
     }
 }
 </style>

@@ -19,16 +19,22 @@
                 5. При сабміті форми виведи об&#39;єкт із введеними даними в
                 консоль і очисти значення полів форми методом reset.
             </p>
-            <div class="flex gap-16">
-                <form action="/" class="login-form grid gap-16 max-w-300">
+            <div class="flex gap-16 ai-start">
+                <form action="/" class="login-form grid gap-16 w-300">
                     <h2>Login</h2>
                     <label
                         >Email <br />
-                        <input type="email" name="email" autocomplete="no" />
+                        <input
+                            type="email"
+                            name="email"
+                            autocomplete="no"
+                            class="w-100p"
+                        />
                     </label>
                     <label
                         >Password <br />
                         <input
+                            class="w-100p"
                             type="password"
                             name="password"
                             autocomplete="no"
@@ -40,7 +46,37 @@
                 </form>
                 <div class="flex gap-16">
                     <code class="code-block">
-                        <pre></pre>
+                        <pre>
+function submit(event: SubmitEvent) {
+    event.preventDefault()
+
+    let form = document.querySelector('.login-form') as HTMLFormElement
+
+    if (!form) return
+
+    const elements = form.elements as HTMLFormControlsCollection
+
+    const emailInput = elements.namedItem('email') as HTMLInputElement
+    const passwordInput = elements.namedItem('password') as HTMLInputElement
+
+    const email = emailInput.value.trim()
+    const password = passwordInput.value.trim()
+
+    if (!email || !password) {
+        alert('All form fields must be filled in')
+        return
+    }
+
+    const formData = {
+        email,
+        password,
+    }
+
+    console.log(formData)
+
+    form.reset()
+}
+                        </pre>
                     </code>
                 </div>
             </div>
@@ -54,7 +90,7 @@ import AppBtn from '@/components/ui/app-btn.component.vue'
 function submit(event: SubmitEvent) {
     event.preventDefault()
 
-    let form = document.querySelector('.login-form')
+    let form = document.querySelector('.login-form') as HTMLFormElement
 
     if (!form) return
 
