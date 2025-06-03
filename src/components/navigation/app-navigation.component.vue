@@ -30,11 +30,11 @@ const routesSemester1 = [
 const routesSemester2 = [
     { name: RouteName.Lab4, label: content.routes.lab4 },
     {
-        name: RouteName.Lab4,
+        name: RouteName.Lab5,
         label: content.routes.lab5,
     },
     {
-        name: RouteName.Lab4,
+        name: RouteName.Lab6,
         label: content.routes.lab6,
     },
 ]

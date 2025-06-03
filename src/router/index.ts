@@ -13,6 +13,8 @@ export enum RouteName {
     Lab3_1 = 'lab-3-1',
     Lab3_2 = 'lab-3-2',
     Lab4 = 'lab-4',
+    Lab5 = 'lab-5',
+    Lab6 = 'lab-6',
     PageNotFound = 'page-not-found',
 }
 
@@ -64,6 +66,18 @@ const routes: Array<RouteRecordRaw> = [
         name: RouteName.Lab4,
         meta: { title: contentRoutes.lab4 },
         component: () => import('@/views/lab-4/lab-4.view.vue'),
+    },
+    {
+        path: '/lab-5',
+        name: RouteName.Lab5,
+        meta: { title: contentRoutes.lab5 },
+        component: () => import('@/views/lab-5/lab-5.view.vue'),
+    },
+    {
+        path: '/lab-6',
+        name: RouteName.Lab6,
+        meta: { title: contentRoutes.lab6 },
+        component: () => import('@/views/lab-6/lab-6.view.vue'),
     },
 ]
 
