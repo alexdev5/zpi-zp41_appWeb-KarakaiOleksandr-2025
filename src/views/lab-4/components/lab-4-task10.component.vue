@@ -44,7 +44,9 @@
                         v-model="inputModel"
                     />
                     <div class="flex gap-16">
-                        <AppBtn @click="create()">Create</AppBtn>
+                        <AppBtn variant="primary" @click="create()"
+                            >Create</AppBtn
+                        >
                         <AppBtn @click="destroyBoxes()">Destroy</AppBtn>
                     </div>
                 </div>

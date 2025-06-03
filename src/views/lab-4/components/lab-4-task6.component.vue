@@ -19,7 +19,9 @@
                         </li>
                     </ul>
                     <div class="flex gap-16">
-                        <AppBtn @click="double()">Подвоїти</AppBtn>
+                        <AppBtn variant="primary" @click="double()"
+                            >Подвоїти</AppBtn
+                        >
                         <AppBtn @click="reset()">Скинути</AppBtn>
                     </div>
 
@@ -76,7 +78,9 @@ function reset() {
                         <li data-number-default="50">50</li>
                     </ul>
                     <div class="flex gap-16">
-                        <AppBtn class="btn-double">Подвоїти</AppBtn>
+                        <AppBtn variant="primary" class="btn-double"
+                            >Подвоїти</AppBtn
+                        >
                         <AppBtn class="btn-reset">Скинути</AppBtn>
                     </div>
                     <!-- #HTML -->

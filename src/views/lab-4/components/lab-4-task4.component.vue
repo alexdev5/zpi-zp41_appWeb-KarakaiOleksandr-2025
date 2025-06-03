@@ -15,7 +15,9 @@
                 <div class="square"></div>
                 <div class="flex gap-16">
                     <AppBtn @click="decrease('square')">Зменшити</AppBtn>
-                    <AppBtn @click="increase('square')">Збільшити</AppBtn>
+                    <AppBtn @click="increase('square')" variant="primary"
+                        >Збільшити</AppBtn
+                    >
                 </div>
             </div>
         </div>

@@ -19,7 +19,7 @@
                 Message
                 <textarea name="message" rows="8"></textarea>
             </label>
-            <AppBtn type="submit" size="md">Submit</AppBtn>
+            <AppBtn type="submit" size="md" variant="primary">Submit</AppBtn>
         </form>
     </div>
 </template>

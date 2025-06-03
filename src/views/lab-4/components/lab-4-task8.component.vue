@@ -20,7 +20,11 @@
                 консоль і очисти значення полів форми методом reset.
             </p>
             <div class="flex gap-16 ai-start">
-                <form action="/" class="login-form grid gap-16 w-300">
+                <form
+                    action="/"
+                    class="login-form grid gap-16 w-300"
+                    autocomplete="on"
+                >
                     <h2>Login</h2>
                     <label
                         >Email <br />
@@ -40,7 +44,12 @@
                             autocomplete="no"
                         />
                     </label>
-                    <AppBtn type="submit" @click="submit($event)">
+                    <AppBtn
+                        size="md"
+                        variant="primary"
+                        type="submit"
+                        @click="submit($event)"
+                    >
                         Log In
                     </AppBtn>
                 </form>

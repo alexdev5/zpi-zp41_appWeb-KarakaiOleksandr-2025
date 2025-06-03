@@ -30,7 +30,9 @@ function getRandomHexColor() {
                 >
                     <h1>color: {{ color }}</h1>
                 </div>
-                <AppBtn @click="changeColor()">change-color</AppBtn>
+                <AppBtn variant="primary" size="md" @click="changeColor()"
+                    >change-color
+                </AppBtn>
             </div>
         </div>
     </div>
